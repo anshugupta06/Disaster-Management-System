@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Leaflet Legend Styles - Added for HeatmapMap component */
+.leaflet-control.legend {
+  background: white;
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  line-height: 22px;
+  width: 160px; /* Adjusted width to accommodate more legend items */
+}
+
+.leaflet-control.legend h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.leaflet-control.legend i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+/* Specific color classes for the legend (added new ones) */
+/* These map to the colors defined in DISASTER_COLOR_PRIORITY in HeatmapMap.js */
+.leaflet-control.legend .red { background-color: red; }
+.leaflet-control.legend .orange { background-color: orange; }
+.leaflet-control.legend .purple { background-color: purple; }
+.leaflet-control.legend .brown { background-color: brown; }
+.leaflet-control.legend .grey { background-color: grey; }
+.leaflet-control.legend .darkorange { background-color: #FF4500; }
+.leaflet-control.legend .lightblue { background-color: #ADD8E6; }
+.leaflet-control.legend .darkred { background-color: darkred; }
+.leaflet-control.legend .darkmagenta { background-color: #8B008B; }
+.leaflet-control.legend .gold { background-color: #FFD700; }
+.leaflet-control.legend .mediumgrey { background-color: #A0A0A0; }
+.leaflet-control.legend .saddlebrown { background-color: #8B4513; }
+.leaflet-control.legend .steelblue { background-color: #4682B4; }
+.leaflet-control.legend .maroon { background-color: #800000; }
+.leaflet-control.legend .darkblue { background-color: darkblue; }
+.leaflet-control.legend .green { background-color: green; }

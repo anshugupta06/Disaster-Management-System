@@ -1,0 +1,255 @@
+/*
+ * alertsystem.css
+ * This file provides custom styling for the AlertSystem React component.
+ * It's designed to be modern, clean, and unique.
+ */
+
+/* ================== General Layout & Typography ================== */
+.alert-system-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(to bottom right, #e0f2fe, #bfdbfe);
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+}
+
+.alert-system-wrapper {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.main-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #3730a3;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== Grid & Columns ================== */
+.alert-system-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .alert-system-grid {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+/* ================== Card & Section Styling ================== */
+.card-panel {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card-panel:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ================== User ID Card ================== */
+.user-id-card {
+    background-color: #dbeafe;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #bfdbfe;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-id-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1e40af;
+}
+
+.user-id-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+    color: #1d4ed8;
+    word-break: break-all;
+}
+
+.copy-button {
+    color: #3b82f6;
+}
+.copy-button:hover {
+    color: #1d4ed8;
+}
+
+/* ================== Form Styling ================== */
+.alert-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #4f46e5;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+}
+
+.submit-button:hover {
+    background-color: #4338ca;
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ================== Live Alerts Section ================== */
+.live-alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.no-alerts-message {
+    padding: 2rem;
+    text-align: center;
+    color: #6b7280;
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+    border: 2px dashed #d1d5db;
+}
+
+.no-alerts-icon {
+    margin: auto;
+    margin-bottom: 1rem;
+    color: #9ca3af;
+}
+
+.alert-card {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    background-color: #f9fafb;
+    border-left-width: 0.25rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.alert-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.alert-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.alert-type {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.severity-pill {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px; /* full rounded */
+}
+
+.alert-description {
+    color: #374151;
+    margin-top: 0.5rem;
+}
+
+.alert-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.timestamp {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+/* ================== Severity Colors ================== */
+.border-red-500 { border-color: #ef4444; }
+.border-yellow-500 { border-color: #f59e0b; }
+.border-green-500 { border-color: #10b981; }
+
+/* ================== Modal Styling ================== */
+.modal-title {
+    color: #4f46e5;
+    font-weight: 700;
+}
+
+.modal-content-text {
+    color: #4b5563;
+}
+
+.modal-button {
+    margin-top: 1rem;
+    background-color: #4f46e5;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.modal-button:hover {
+    background-color: #4338ca;
+}
+
+/* ================== Material-UI Overrides for consistency ================== */
+.MuiInputBase-root,
+.MuiSelect-root,
+.MuiOutlinedInput-root {
+    border-radius: 0.5rem !important;
+}
+
+.MuiAlert-root {
+  border-radius: 0.5rem !important;
+}
+
+.MuiButton-containedPrimary {
+  background-color: #4f46e5 !important;
+}
+.MuiButton-containedPrimary:hover {
+  background-color: #4338ca !important;
+}
+

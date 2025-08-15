@@ -1,0 +1,213 @@
+/* AlertsDashboard.css */
+
+.alerts-dashboard-container {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    gap: 2rem; /* Space between the two main sections */
+    padding: 2rem;
+    background-color: #f8f9fa; /* Light background */
+    min-height: calc(100vh - 64px); /* Adjust based on header height */
+    font-family: 'Inter', sans-serif;
+    color: #343a40;
+    overflow-y: auto; /* Enable scrolling for the whole dashboard */
+}
+
+.alerts-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Two columns, responsive */
+    gap: 2rem;
+}
+
+/* Card Styling */
+.alerts-list-card, .report-alert-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.alerts-list-card h1, .report-alert-card h2 {
+    font-size: 2rem;
+    color: #dc3545; /* Red for alerts */
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.alerts-list-card p, .report-alert-card p {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Alerts Table Styling */
+.alerts-table-container {
+    max-height: 400px; /* Limit height for scrollability */
+    overflow-y: auto;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.alerts-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.alerts-table th, .alerts-table td {
+    border: 1px solid #dee2e6;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.alerts-table th {
+    background-color: #e9ecef;
+    font-weight: 600;
+    color: #495057;
+    white-space: nowrap;
+}
+
+.alerts-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.alerts-table tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+/* Report Form Styling */
+.report-alert-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.report-alert-card .form-group {
+    text-align: left;
+}
+
+.report-alert-card label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.report-alert-card input[type="text"],
+.report-alert-card input[type="number"],
+.report-alert-card select,
+.report-alert-card textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-alert-card input:focus,
+.report-alert-card select:focus,
+.report-alert-card textarea:focus {
+    outline: none;
+    border-color: #dc3545; /* Red focus */
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.report-button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.report-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+/* Message Box Styling */
+.message-box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.message-box.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-box.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Map Container */
+.alerts-map-container {
+    height: 500px; /* Fixed height for the map */
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Ensure border-radius applies to map tiles */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .alerts-content-wrapper {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+    .alerts-map-container {
+        height: 400px; /* Adjust map height for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .alerts-dashboard-container {
+        padding: 1rem;
+    }
+    .alerts-list-card, .report-alert-card {
+        padding: 1.5rem;
+    }
+    .alerts-list-card h1, .report-alert-card h2 {
+        font-size: 1.6rem;
+    }
+    .alerts-list-card p, .report-alert-card p {
+        font-size: 0.95rem;
+    }
+    .alerts-table {
+        font-size: 0.8rem;
+    }
+    .alerts-table th, .alerts-table td {
+        padding: 0.6rem;
+    }
+    .report-alert-card input,
+    .report-alert-card select,
+    .report-alert-card textarea,
+    .report-button {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+    .alerts-map-container {
+        height: 300px;
+    }
+}
